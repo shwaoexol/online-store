@@ -1,0 +1,180 @@
+.cart {
+    padding: 20px 50px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-link {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &-title {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 120%;
+            color: #000;
+        }
+    }
+
+    &__list {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__total {
+        span {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+            span {
+                color: #000;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 12px 6px 6px;
+        box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.25);
+        background: #fff;
+        border-radius: 12px;
+
+        @media (max-width:700px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width:700px) {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            &-img {
+                width: 250px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 20px;
+                @media (max-width: 700px) {
+                    width: 80%;
+                    object-fit: contain;
+                }
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &-title {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 18px;
+                color: #000;
+                @media (max-width: 500px) {
+                    font-size: 16px;
+                }
+            }
+
+            &-price {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 16px;
+                color: #fe724c;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            &-minus {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+               img {
+                width: 25px;
+                height: 25px;
+               }
+            }
+
+            &-count {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 18px;
+                color: #000;
+            }
+
+            &-plus {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            &-remove {
+                border: none;
+                background: transparent;
+                cursor: pointer;;
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    &__total {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f1f2f3;
+        padding-bottom: 10px;
+
+        &-text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+
+        &-price {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 19px;
+            text-align: right;
+            color: #000;
+
+            span {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                color: #9796a1;
+                margin-left: 5px;
+            }
+        }
+    }
+
+}

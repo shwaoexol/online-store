@@ -1,0 +1,11 @@
+$Exo:      ('Regular', 400),
+           ('Meduim', 500),
+           ('Bold', 700);
+           
+@each $name, $weight in $Exo {
+    @font-face {
+        font-family: 'Exo';
+        src: url('/public/fonts/Exo-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}

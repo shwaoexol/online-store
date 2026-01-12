@@ -1,0 +1,110 @@
+.products__search {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  @media (max-width: 500px) {
+    padding: 16px;
+  };
+}
+
+.products {
+   display: flex;
+   gap: 20px;
+   @media (max-width: 1000px) {
+    flex-direction: column;
+   }
+   &__list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        
+    }
+   }
+   &__item {
+    border-radius: 20px;
+    box-shadow: 18px 18px 36px 0 rgba(211, 209, 216, 0.25);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3;
+    @media (max-width: 768px) {
+        width: 80%;
+        margin: 0 auto;
+    }
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 22px 22px 44px rgba(211, 209, 216, 0.35);
+    }
+    &-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+        display: block;
+        @media (max-width: 1000px) {
+            width: 50%;
+        }
+    }
+    &-prices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 20px;
+        font-weight: 600;
+        &-price {
+        text-decoration: line-through;
+        color: #555151;
+        }
+        &-discount {
+        color: #ff5252;
+        }
+        &-disprice {
+        color: #059951;
+        }
+    }
+    &-cart {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #F5D27A 0%, #EF9430 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        &-stock {
+            color: #777;
+        }
+        &-title {
+            color: #222;
+        }
+        &-text {
+            color: #555;
+        }
+    }
+   }
+}

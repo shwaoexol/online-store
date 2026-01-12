@@ -1,0 +1,33 @@
+.nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: rgb(37, 37, 37);
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+
+.link {
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+    display: flex;
+    cursor: pointer;
+}
+
+
+

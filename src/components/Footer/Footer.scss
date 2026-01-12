@@ -1,0 +1,94 @@
+.footer {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 24px;
+        color: #000;
+    }
+    &__text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #0e0d0d;
+        @media (max-width: 500px) {
+            margin: 10px 20px;
+        }
+    }
+    &__products {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 187%;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &-adress {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.712);
+        }
+        &-number {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 712);
+        }
+    }
+    &__input {
+        display: flex;
+        &-box {
+            display: flex;
+            flex-direction: row;
+            &-text {
+                border: 1px solid #efefef;
+                border-radius: 10px 0 0 10px;
+                width: 200px;
+                height: 50px;
+                background: #fcfcfd;
+                padding: 5px 30px 5px 20px;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                color: #9aa0b4;
+                &::placeholder {
+                   font-family: var(--font-family);
+                   font-weight: 400;
+                   font-size: 14px;
+                   color: #0e0d0d; 
+                }
+            }
+        } 
+    }  
+    &__btn {
+        padding: 8px 12px;
+        margin-left: 5px;
+        background: #94918f;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: #bb6824;
+        }
+        img {
+            width: 25px;
+        }
+
+    }
+}

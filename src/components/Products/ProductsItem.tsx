@@ -15,7 +15,7 @@ const ProductsItem:FC<IProductItem> = ({ product }) => {
 
     
     const { addToCart } = cartStore()
-    const discountPrice = product ? getDiscountPrice(product.price, product.discountPercentage) 
+    const discountPrice = product ? getDiscountPrice(+product.price, +product.discountPercentage) 
     : null
 
     const addToCartHandler = (event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

@@ -1,4 +1,4 @@
-import  { useEffect, useState, type FC } from 'react';
+import  {  type FC } from 'react';
 import Select from 'react-select';
 import './Sort.scss'
 import { productStore } from '../../store/productStore';
@@ -32,8 +32,7 @@ const options = [
 
 const SortCategories:FC = () => {
 
-  const { category, setCategory } = productStore()
-  const [selectedOption, setSelectedOption] = useState(null)
+ const {category, setCategory } = productStore()
 
  const customStyles = {
     control: (provided: any) => ({
@@ -51,18 +50,12 @@ const SortCategories:FC = () => {
     }),
   };
 
-  const changeSortOptions = (option: any) => {
-    setCategory(option.value)
-    setSelectedOption(option)
+  const selectedOption = options.find(item => item.value == category) || null
+
+  const changeSortOptions = (option: CategoryOption | null) => {
+    if (!option) return;
+    setCategory(option.value) 
   }
-
-  useEffect(() => {
-    const option = options.find((item) => item.value == category) || null
-    setSelectedOption(option)
-  }, [category])
-
-
-  console.log(category)
 
   return (
     <>

@@ -7,12 +7,7 @@ export interface IProduct {
     stock: number;
     discountPercentage: string;
     images: string[];
-    thumbnail: {
-        id: number;
-        url: string;
-        width: number;
-        height: number;
-        }
+    thumbnail: string;
 }
 
 export interface ICartProduct extends IProduct {

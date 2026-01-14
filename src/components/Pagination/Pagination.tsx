@@ -10,7 +10,7 @@ interface IPagination {
 }
 
 
-const Pagination:FC<IPagination> = ({ limit, currentPage, totalCount, onChangePage }) => {
+const Pagination:FC<IPagination> = ({ limit, totalCount, onChangePage }) => {
 
   const totalPage = Math.ceil(totalCount / limit);
  

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import type { ICartProduct } from "../types";
+import type { ICartProduct } from "../types/types";
 import { calcTotalCount, calcTotalPrice, getCartFromLs } from "../utils/getCartFromLs";
 
 

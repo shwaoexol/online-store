@@ -3,7 +3,10 @@ import Select from 'react-select';
 import './Sort.scss'
 import { productStore } from '../../store/productStore';
 
-
+type CategoryOption = {
+  value: string
+  label: string
+}
 
 const options = [
   { value: 'beauty', label: 'Beauty' },

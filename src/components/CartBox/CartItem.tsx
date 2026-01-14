@@ -4,9 +4,12 @@ import type { ICartProduct } from '../../types/types'
 import { cartStore } from '../../store/cartStore'
 import { deleteIcon, minusIcon, plusIcon } from '../../utils/img'
 
-const CartItem:FC<ICartProduct> = ({ id, title, price, count, thumbnail }) => {
+const CartItem:FC<ICartProduct> = ( product ) => {
 
+    const { id, title, price, count, thumbnail } = product 
     const { minusCount, addToCart, removeItem } = cartStore()
+
+    
   return (
     <>
         <div className="cart__item">
@@ -22,7 +25,7 @@ const CartItem:FC<ICartProduct> = ({ id, title, price, count, thumbnail }) => {
                     <img src={minusIcon} alt="" />
                 </button>
                 <span className="cart__item-right-count">{count}</span>
-                <button className="cart__item-right-plus" onClick={() => addToCart({id: id})}>
+                <button className="cart__item-right-plus" onClick={() => addToCart(product)}>
                     <img src={plusIcon} alt="" />
                 </button>
                 <button className="cart__item-right-remove" onClick={() => removeItem(id)}>

@@ -20,7 +20,10 @@ const ProductsItem:FC<IProductItem> = ({ product }) => {
 
     const addToCartHandler = (event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()
-        addToCart(product)
+        addToCart({
+            ...product,
+            count: 1
+        })
         toast.success('Product added to cart', {
             position: 'top-right',
             autoClose: 2000,

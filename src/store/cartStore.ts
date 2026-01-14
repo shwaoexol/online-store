@@ -37,7 +37,7 @@ export const cartStore = create<ICartStore>()(devtools((set, get) => ({
         }else {
             updatedCart = [...cart, {...product, count: 1 } ]
         }
-        
+         
         localStorage.setItem('cart', JSON.stringify(updatedCart))
         set({
             cart: updatedCart,

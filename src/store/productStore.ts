@@ -4,7 +4,7 @@ import { devtools } from "zustand/middleware";
 interface IProductStore {
     searchValue: string;
     sortBy: string;
-    order: "asc";
+    order: "asc" | "desc";
     currentPage: number;
     limit: number;
     skip: number;
@@ -21,7 +21,7 @@ interface IProductStore {
 export const productStore = create<IProductStore>()(devtools((set) => ({
     searchValue: '',
     sortBy: '',
-    order: "asc" | "desc",
+    order: 'asc',
     currentPage: 1,
     limit: 12,
     skip: 0,

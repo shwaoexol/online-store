@@ -73,7 +73,7 @@ const ProductById:FC = () => {
                 <SwiperSlide>
                   <img src={data.thumbnail} alt="" />
                 </SwiperSlide>
-                {data.images?.map((image, i) => (
+                {data.images?.map((image:string, i:number) => (
                   <SwiperSlide key={i}>
                     <img src={image} alt="" />
                   </SwiperSlide>

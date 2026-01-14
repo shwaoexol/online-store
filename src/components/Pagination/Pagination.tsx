@@ -25,7 +25,6 @@ const Pagination:FC<IPagination> = ({ limit, currentPage, totalCount, onChangePa
           pageCount={totalPage}
           previousLabel="<"
           renderOnZeroPageCount={null}
-          forcePage={currentPage - 1}
       />
     </>
   )

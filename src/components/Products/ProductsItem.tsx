@@ -5,6 +5,7 @@ import type { IProduct } from '../../types/types'
 import { cartStore } from '../../store/cartStore'
 import {  toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import { getDiscountPrice } from '../../utils/price'
 
 interface IProductItem {
     product:IProduct
@@ -12,8 +13,10 @@ interface IProductItem {
 
 const ProductsItem:FC<IProductItem> = ({ product }) => {
 
-    const discountPrice = Math.round((product.price - (product.price * product.discountPercentage) / 100) * 100) / 100
+    
     const { addToCart } = cartStore()
+    const discountPrice = product ? getDiscountPrice(product.price, product.discountPercentage) 
+    : null
 
     const addToCartHandler = (event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()

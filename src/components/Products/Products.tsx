@@ -7,6 +7,7 @@ import { productStore } from '../../store/productStore'
 import {  useProductSort, useProducts } from '../../api/common'
 import Pagination from '../Pagination/Pagination'
 import Search from '../Search/Search'
+import type { IProduct } from '../../types/types'
 
 
 
@@ -32,7 +33,7 @@ const Products: FC = () => {
   const { data: sort } = useProductSort({ sortBy, order, limit, skip, category })
 
 
-  const onChangePage = (num) => {
+  const onChangePage = (num: number) => {
     setCurrentPage(num)
     setSkip(num * limit - limit)
   }
@@ -67,7 +68,7 @@ const totalCount =
 
         <div className="products__content">
           <div className="products__list">
-            {products?.map(product => (
+            {products?.map((product:IProduct) => (
               <ProductsItem key={product.id} product={product} />
             ))}
          </div>

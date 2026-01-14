@@ -1,6 +1,5 @@
 import  { useEffect, useState, type FC } from 'react';
 import Select from 'react-select';
-import { categoryStore } from '../../store/categoryStore';
 import './Sort.scss'
 import { productStore } from '../../store/productStore';
 

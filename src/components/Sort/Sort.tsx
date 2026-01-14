@@ -1,7 +1,8 @@
-import { FC, useState } from "react";
+import type { FC } from "react";
 import Select from "react-select";
 import "./Sort.scss";
 import { productStore } from "../../store/productStore";
+
 
 interface SortOption {
   value: {
@@ -26,7 +27,7 @@ const stockOptions: SortOption[] = [
   { value: { sortBy: "stock", order: "desc" }, label: "High to low" },
 ];
 
-const Sort: FC = () => {
+const Sort:FC = () => {
   
   const {sortBy, order, setSortBy, setOrder} = productStore()
 

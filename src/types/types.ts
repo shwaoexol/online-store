@@ -8,7 +8,7 @@ export interface IProduct {
     discountPercentage: string;
     images: string[];
     thumbnail: {
-        id: string;
+        id: number;
         url: string;
         width: number;
         height: number;
